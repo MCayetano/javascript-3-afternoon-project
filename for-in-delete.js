@@ -39,12 +39,13 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-// function showValues( obj ) {
-//   for (var key in obj) {
-//     obj[key]
-//   }
-//   return obj;
-// }
+function showValues(obj) {
+  let str = '';
+  for (var key in obj) {
+    str += obj[key]
+  }
+  return str;
+}
 
 
 
@@ -94,12 +95,15 @@ function double(obj) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-// function secrets(obj) {
-// let str = '';
-// for (let key in obj) {
-//   if (obj[key].startsWith('sh'))
-// }
-// }
+function secrets(obj) {
+let myString = '';
+for (let key in obj) {
+  if (key.startsWith('sh')) {
+  myString += obj[key]
+  }
+}
+return myString;
+}
 
 
 
@@ -169,14 +173,14 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-// function startsWithK(obj) {
-//   for (let key in obj) {
-//     if(obj[key][0] === 'k') {
-//       delete obj[key];
-//     }
-//   }
-//   return obj;
-// }
+function startsWithK(obj) {
+  for (let key in obj) {
+    if(key.startsWith('k')) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 
