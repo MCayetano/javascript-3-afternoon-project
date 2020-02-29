@@ -108,6 +108,12 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 let orderTotals = orders.map(elem => elem['price'] * elem['tax'].toFixed(2) + elem['price'])
 
+// let orderTotals = orders.map(function(purchase) {
+//   tax = purchase.price * purchase.tax
+//   total = tax + purchase.price
+//   return total
+// })
+
 
 
 
