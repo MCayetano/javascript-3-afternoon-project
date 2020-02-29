@@ -24,6 +24,8 @@ let evenNumbers = mixedNumbers.filter(elem => elem % 2 === 0)
 
 
 
+
+
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -104,7 +106,8 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
 */
 
-// let orderTotals = orders.map(elem = > elem.)
+let orderTotals = orders.map(elem => elem['price'] * elem['tax'].toFixed(2) + elem['price'])
+
 
 
 
@@ -124,6 +127,16 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal = purchases.filter((total, elem) => elem.owner["bob"] + total)
+
+// let bobsTotal = purchases
+// .filter(function(client) {
+//   return client.owner === 'Bob';
+//   })
+  let bobsTotal = purchases.reduce(function (total, purchase) {
+    return purchase.owner === 'Bob' ? purchase.price + total : total
+
+
+}, 0)
+
 
 
