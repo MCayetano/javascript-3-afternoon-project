@@ -50,13 +50,22 @@ var employees = [
     3. Return the updated employee array.
 */
 
-// function employeeUpdater() {
-//   for (var i = 0; i < employees.length; i++){
-//     if(employees[i].firstName === 'Theo') {
-//       delete employees[i];
-//     }
-//   }
-// }
+
+function employeeUpdater(){
+  for (var i = 0; i < employees.length; i++){
+    if (employees[i]["firstName"] === 'Theo'){
+      employees.splice(i, 1)
+    }
+    if (employees[i]["firstName"] === 'Lorie') {
+      employees[i]["department"] = 'HR'
+    } 
+      
+  }
+    return employees;
+}
+
+
+
 
 
 
